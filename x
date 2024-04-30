@@ -4488,7 +4488,7 @@ CMDs[#CMDs + 1] = {NAME = 'fov [num]', DESC = 'Adjusts field of view (default is
 CMDs[#CMDs + 1] = {NAME = 'fixcam / restorecam', DESC = 'Fixes camera'}
 CMDs[#CMDs + 1] = {NAME = 'enableshiftlock / enablesl', DESC = 'Enables the shift lock option'}
 CMDs[#CMDs + 1] = {NAME = 'lookat [player]', DESC = 'Moves your camera view to a player'}
-CMDs[#CMDs + 1] = {NAME = 'starterpack', DESC = 'use bss starterpack'}
+CMDs[#CMDs + 1] = {NAME = 'sp', DESC = 'use bss starterpack'}
 CMDs[#CMDs + 1] = {NAME = 'selfban', DESC = 'ban thign'}
 CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
 CMDs[#CMDs + 1] = {NAME = 'btools (CLIENT)', DESC = 'Gives you building tools (DOES NOT REPLICATE)'}
@@ -8374,7 +8374,15 @@ addcmd('lookat',{},function(args, speaker)
 	speaker.CameraMinZoomDistance = preMinZoom
 end)
 
-addcmd("starterpack",{},function(args,speaker)
+addcmd("sp",{},function(args,speaker)
+    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClaimHive"):FireServer(6)
+    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClaimHive"):FireServer(5)
+    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClaimHive"):FireServer(4)
+    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClaimHive"):FireServer(3)
+    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClaimHive"):FireServer(2)
+    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("ClaimHive"):FireServer(1) 
+	wait(.1)
+
 	w = .25
 
 	function egg()
