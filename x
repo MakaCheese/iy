@@ -10396,7 +10396,7 @@ end)
 
 addcmd('explorer', {'dex'}, function(args, speaker)
 	notify('Loading', 'Hold on a sec')
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua"))
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua"))()
 end)
 
 addcmd('olddex', {'odex'}, function(args, speaker)
